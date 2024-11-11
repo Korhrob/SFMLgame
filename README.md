@@ -1,6 +1,6 @@
 Controls:
 Use WASD to move around and '1' '2' '3' to select upgrades, survive as long as you can!
-There's also a cheap code 'U'
+There's also a cheat code 'U'
 
 # Supercell Coding Test
 Hi! This is the base code structure for the Supercell coding test.
