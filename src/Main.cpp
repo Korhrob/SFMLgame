@@ -27,6 +27,12 @@ int main(int argc, char* argv[])
     // run the program as long as the window is open
     while (window.isOpen())
     {
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
+		{
+			window.close();
+			break;
+		}
+
         // check all the window's events that were triggered since the last iteration of the loop
         sf::Event event;
         while (window.pollEvent(event))
@@ -38,11 +44,6 @@ int main(int argc, char* argv[])
                     window.close();
                     break;
                 case sf::Event::KeyPressed:
-					if (event.key.code == sf::Keyboard::Escape)
-					{
-						window.close();
-						break;
-					}
 					if (event.key.code == sf::Keyboard::U)
 					{
 						// cheat code

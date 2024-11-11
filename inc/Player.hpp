@@ -34,7 +34,7 @@ public:
 
     Weapon* getWeapon() { return m_pWeapon.get(); }
 	void increaseUpgrade(eUpgradeType type) { m_upgradeLevel[type]++; }
-	float getCooldown(eUpgradeType type) { return std::clamp(DefaultCooldowns[type] - (m_upgradeLevel[type] * DefaultCooldowns[type] / 10), 0.05f, 5.0f); }
+	float getCooldown(eUpgradeType type) { return std::clamp(DefaultCooldowns[type] - (m_upgradeLevel[type] * CooldownUpgrade), 0.05f, 5.0f); }
 	int	getUpgradeLevel(eUpgradeType type) { return m_upgradeLevel[type]; }
 
 private:
@@ -44,8 +44,8 @@ private:
     std::unique_ptr<Weapon> m_pWeapon;
 
 	int m_upgradeLevel[eUpgradeType::TYPE_MAX];
-	float m_weaponTimer[eUpgradeType::TYPE_CROSSBOW];
-	float m_weaponCooldown[eUpgradeType::TYPE_CROSSBOW];
+	float m_weaponTimer[eUpgradeType::TYPE_MAX];
+	float m_weaponCooldown[eUpgradeType::TYPE_MAX];
 	void shootProjectile(float deltaTime, eUpgradeType type);
 
 };

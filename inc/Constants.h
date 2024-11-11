@@ -28,10 +28,10 @@ const float SwordSwingSpeed = 300.0f;
 const float CooldownUpgrade = 0.1f;
 
 const float DefaultCooldowns[4] {
-	2, // Sword
-	3, // Fireball
-	4, // Bow
-	5  // Crossbow
+	2.0f, // Sword
+	3.0f, // Fireball
+	4.0f, // Bow
+	5.0f  // Crossbow
 };
 
 const std::string name_sword = "Sword";

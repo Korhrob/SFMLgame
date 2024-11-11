@@ -101,7 +101,6 @@ void Game::resetLevel()
 	m_score = 0;
 
 	m_killCount = 0;
-	m_killRequirement = 4;
 	m_spawnCount = 0;
 	m_vampireCooldown = 2.0f;
     m_nextVampireCooldown = 2.0f;
@@ -281,10 +280,9 @@ void Game::vampireSpawner(float deltaTime)
     m_pVampires.push_back(std::make_unique<Vampire>(this, spawnPosition));
 
     m_spawnCount++;
-    if (m_nextVampireCooldown > 0.1f && m_killCount > m_killRequirement)
+    if (m_nextVampireCooldown > 0.1f && m_killCount % 8)
     {
 		m_killCount = 0;
-		m_killRequirement = (float)m_killRequirement * 1.25f;
         m_nextVampireCooldown -= 0.1f;
 		std::cout << "difficulty increased: " << m_nextVampireCooldown << std::endl; 
     }

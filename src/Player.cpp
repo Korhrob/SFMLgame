@@ -86,7 +86,9 @@ void Player::update(float deltaTime)
 		eUpgradeType type = static_cast<eUpgradeType>(i);
 
 		if (m_upgradeLevel[type] > 0)
+		{
 			shootProjectile(deltaTime, type);
+		}
 	}
 
 }

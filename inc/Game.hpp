@@ -55,8 +55,6 @@ public:
 	void openUpgradeMenu();
 	void increaseScore();
 
-	//int getPlayerUpgradeLevel(eUpgradeType type) { return m_pPlayer->getUpgradeLevel(type); }
-
 private:
     std::unique_ptr<Player> m_pPlayer;
 
@@ -82,7 +80,6 @@ private:
 	int		m_upgradeId;
 
 	int		m_score;
-	int		m_killRequirement;
 	int		m_killCount;
 
 };
