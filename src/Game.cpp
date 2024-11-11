@@ -280,7 +280,7 @@ void Game::vampireSpawner(float deltaTime)
     m_pVampires.push_back(std::make_unique<Vampire>(this, spawnPosition));
 
     m_spawnCount++;
-    if (m_nextVampireCooldown > 0.1f && m_killCount % 8)
+    if (m_nextVampireCooldown > 0.1f && m_killCount % 6 == 0)
     {
 		m_killCount = 0;
         m_nextVampireCooldown -= 0.1f;
